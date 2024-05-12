@@ -339,9 +339,9 @@ def fwhm3(valuelist, height=0.5, peakpos=-1, total=1, exactpos=0, rescalezero=0)
         ind2 = len(valuelist)-1
         #, peakvalue,phalf)
         # print(ind1,ind2,valuelist[ind1],valuelist[ind2])
-        while ind1 < peakpos and valuelist[ind1] < phalf:
+        while ind1 < peakpos and valuelist[ind1] <= phalf:
             ind1 = ind1 + 1
-        while ind2 > peakpos and valuelist[ind2] < phalf:
+        while ind2 > peakpos and valuelist[ind2] <= phalf:
             ind2 = ind2 - 1
         #print(ind1,ind2)
         # ind1 and 2 are now just above phalf
